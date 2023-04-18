@@ -77,26 +77,26 @@ Length       = args[1;LengthCount]
 | 0xD7      | SetPitchBend         | s16_BE pitch                     | Parameter is in big endian
 | 0xD8      | SetPortamentoTime    | u16 time                         |
 | 0xDB      | SetBendRange         | u8 range                         |
-| 0xDC      | SetPitchLFO          | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](LFO%20Waveforms)
+| 0xDC      | SetPitchLFO          | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](#LFO-Waveforms)
 | 0xDD      | SetPitchLFOTime      | u16 delay, u16 fadeTime          |
-| 0xDF      | SetPitchLFOType      | u8 type                          | [LFO Types](LFO%20Types)
+| 0xDF      | SetPitchLFOType      | u8 type                          | [LFO Types](#LFO-Types)
 | 0xE0      | SetVolume            | u8 volume                        |
 | 0xE1      | AddVolume            | s8 volume                        |
 | 0xE2      | FadeVolume           | u16 time, s8 volume              |
 | 0xE3      | SetExpression        | u8 expression                    |
-| 0xE4      | SetVolumeLFO         | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](LFO%20Waveforms)
+| 0xE4      | SetVolumeLFO         | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](#LFO-Waveforms)
 | 0xE5      | SetVolumeLFOTime     | u16 delay, u16 fadeTime          |
-| 0xE7      | SetVolumeLFOType     | u8 type                          | [LFO Types](LFO%20Types)
+| 0xE7      | SetVolumeLFOType     | u8 type                          | [LFO Types](#LFO-Types)
 | 0xE8      | SetPan               | u8 pan                           |
 | 0xE9      | AddPan               | s8 pan                           |
 | 0xEA      | FadePan              | u16 time, s8 pan                 |
-| 0xEC      | SetPanLFO            | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](LFO%20Waveforms)
+| 0xEC      | SetPanLFO            | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](#LFO-Waveforms)
 | 0xED      | SetPanLFOTime        | u16 delay, u16 fadeTime          |
-| 0xEF      | SetPanLFOType        | u8 type                          | [LFO Types](LFO%20Types)
-| 0xF0      | SetLFO               | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](LFO%20Waveforms)
+| 0xEF      | SetPanLFOType        | u8 type                          | [LFO Types](#LFO-Types)
+| 0xF0      | SetLFO               | u16 rate, u16 depth, u8 waveform | [LFO Waveforms](#LFO-Waveforms)
 | 0xF1      | SetLFOTime           | u16 delay, u16 fadeTime          |
-| 0xF2      | SetLFOParam          | u8 command, u8 argument          | [SetLFOParam commands](SetLFOParam%20commands)
-| 0xF3      | SetLFOType           | u8 type, u8 target               | [LFO Types](LFO%20Types), [LFO Targets](LFO%20Type)
+| 0xF2      | SetLFOParam          | u8 command, u8 argument          | [SetLFOParam commands](#SetLFOParam-commands)
+| 0xF3      | SetLFOType           | u8 type, u8 target               | [LFO Types](#LFO-Types), [LFO Targets](#LFO-Targets)
 | 0xF6      | Trace                | u8 data                          | Debug leftover
 | 0xF8      | Skip16F8             | u16 dummy                        | Skips two bytes
 
@@ -141,9 +141,9 @@ Length       = args[1;LengthCount]
 | ---  | ---              | ---         | ---
 | 0    | None             |             |
 | 1    | SelectLFO        | u8 id       | Selects an LFO (0-3) for further parameter changes
-| 2    | SetType          | u8 type     | [LFO Types](LFO%20Types)
-| 3    | SetTarget        | u8 target   | [LFO Targets](LFO%20Type)
-| 4    | SetWaveform      | u8 waveform | [LFO Waveforms](LFO%20Waveforms)
+| 2    | SetType          | u8 type     | [LFO Types](#LFO-Types)
+| 3    | SetTarget        | u8 target   | [LFO Targets](#LFO-Targets)
+| 4    | SetWaveform      | u8 waveform | [LFO Waveforms](#LFO-Waveforms)
 | 5    | SetRate          | u8 rate     | Multiplier = 10 (pitch, target 4), -20 (volume) and 20 (pan, other)
 | 6    | SetDepth         | u8 depth    | Multiplier = 5
 | 7    | SetStartDelay    | u8 delay    | Multiplier = 20
